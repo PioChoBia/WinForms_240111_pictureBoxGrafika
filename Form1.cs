@@ -45,12 +45,19 @@ namespace WinForms_240111_pictureBoxGrafika
 
     private void buttonElipsa_Click(object sender, EventArgs e)
     {
-
+      pictureBox1.CreateGraphics().DrawEllipse(
+        new Pen(Color.Cyan, 3), 100, 100, 100, 50);
     }
 
     private void buttonPieciokat_Click(object sender, EventArgs e)
     {
-
+      Point[] points = {
+        new Point(40, 10),
+        new Point(40,150),
+        new Point(80,200),
+        new Point(240,200),
+        new Point(150,100) };
+      pictureBox1.CreateGraphics().DrawPolygon(Pens.Peru, points);
     }
 
 
